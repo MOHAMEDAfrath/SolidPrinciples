@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SolidPriciples.SingleResponsibilityPrinciple
 {
-    //Bank account onlly gets the bank details
+    //Bank account only gets the bank details
     public class BankAccount
     {
         public long AccountNumber { get; set; }
