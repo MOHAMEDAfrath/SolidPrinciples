@@ -1,4 +1,5 @@
-﻿using SolidPriciples.Liskov_Principle;
+﻿using SolidPriciples.InterfaceSegregationPrinciple;
+using SolidPriciples.Liskov_Principle;
 using SolidPriciples.OpenClosedPrinciple;
 using SolidPriciples.SingleResponsibilityPrinciple;
 using System;
@@ -24,10 +25,19 @@ namespace SolidPriciples
             //Console.WriteLine(find.Area());
 
             //LSP
-            Colour apple = new Apple();
-            Colour orange = new Orange();
-            Console.WriteLine("The colour of orange is " +orange.GetColour());
-            Console.WriteLine("The colour of apple is " + apple.GetColour());
+            //Colour apple = new Apple();
+            //Colour orange = new Orange();
+            //Console.WriteLine("The colour of orange is " +orange.GetColour());
+            //Console.WriteLine("The colour of apple is " + apple.GetColour());
+            //ISP
+            Console.WriteLine("Online Order");
+            IOnlineOrder onlineOrder = new OnlineOrder();
+            onlineOrder.Order();
+            onlineOrder.OnlinePayment();
+            Console.WriteLine("Offline order");
+            IOfflineOrder offlineOrder = new PayOnDelivery();
+            offlineOrder.Order();
+            
         }
     }
 }
