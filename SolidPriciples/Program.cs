@@ -1,4 +1,5 @@
-﻿using SolidPriciples.OpenClosedPrinciple;
+﻿using SolidPriciples.Liskov_Principle;
+using SolidPriciples.OpenClosedPrinciple;
 using SolidPriciples.SingleResponsibilityPrinciple;
 using System;
 
@@ -17,10 +18,16 @@ namespace SolidPriciples
             //getMoney.ATMFunction(bank);
 
             //OCP
-            FindArea findArea = new Square(5.55);
-            FindArea find = new Circle(5.98);
-            Console.WriteLine(findArea.Area());
-            Console.WriteLine(find.Area());
+            //FindArea findArea = new Square(5.55);
+            //FindArea find = new Circle(5.98);
+            //Console.WriteLine(findArea.Area());
+            //Console.WriteLine(find.Area());
+
+            //LSP
+            Colour apple = new Apple();
+            Colour orange = new Orange();
+            Console.WriteLine("The colour of orange is " +orange.GetColour());
+            Console.WriteLine("The colour of apple is " + apple.GetColour());
         }
     }
 }
